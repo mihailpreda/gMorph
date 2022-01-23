@@ -5,10 +5,10 @@ authors = ["Marcin Benke <marcin.benke@golem.network>", "Jakub Konka <jakub.konk
 edition = "2018"
 license = "GPL-3.0"
 readme = "README.md"
-repository = "https://github.com/golemfactory/gmorph"
+repository = "https://github.com/mihailpreda/gMorph"
 homepage = "https://github.com/golemfactory/gmorph"
 documentation = "https://docs.rs/gmorph"
-description = "Fully homomorphic encryption library for gWasm"
+description = "Fully homomorphic encryption library for gWasm (Added Substraction)"
 
 [dependencies]
 num-traits = "0.2"
@@ -29,6 +29,3 @@ serde_cbor = "0.10.1"
 [target.'cfg(not(target_arch = "wasm32"))'.dev-dependencies]
 quickcheck = "0.9"
 quickcheck_macros = "0.8"
-
-[badges]
-maintenance = { status = "actively-developed" }
