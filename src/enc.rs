@@ -93,23 +93,7 @@ impl MulAssign for Enc {
     }
 }
 
-impl Div for Enc {
-    type Output = Self;
-
-    #[inline]
-    fn mul(self, rhs: Self) -> Self::Output {
-        Self {
-            inner: self.inner / rhs.inner,
-        }
-    }
-}
-
-impl DivAssign for Enc {
-    #[inline]
-    fn div_assign(&mut self, rhs: Self) {
-        *self = *self / rhs
-    }
-}
+ 
 
 impl Sub for Enc {
     type Output = Self;
