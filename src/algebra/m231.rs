@@ -6,7 +6,7 @@ use rand::Rng;
 use serde::{Deserialize, Serialize};
 use std::convert::TryFrom;
 use std::fmt;
-use std::ops::{Add, AddAssign, Div, Mul, MulAssign, Neg, Sub, SubAssign, DivAssign};
+use std::ops::{Add, AddAssign, Div, Mul, MulAssign, Neg, Sub, SubAssign /* ,DivAssign*/};
 
 const MODULUS: u32 = 2147483647u32; // 2^31 -1
 const MODULUSI32: i32 = 2147483647i32;
@@ -206,13 +206,13 @@ impl Div for Mod231 {
     }
 }
 
-impl DivAssign for Mod231 {
-    type Output = Self;
+// impl DivAssign for Mod231 {
+//     type Output = Self;
 
-    fn div_assign(&mut self, other: Self) {
-        *self = self.div(other)
-    }
-}
+//     fn div_assign(&mut self, other: Self) {
+//         *self = self.div(other)
+//     }
+// }
 
 impl Identity<Additive> for Mod231 {
     fn identity() -> Self {
